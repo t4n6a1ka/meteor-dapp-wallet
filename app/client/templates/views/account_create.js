@@ -361,7 +361,9 @@ Template['views_account_create'].events({
         )
       );
 
-      if (owners.length === 0) return;
+      if (owners.length === 0) {
+        return;
+      }
 
       var address = template.find('input.import').value;
       address = '0x' + address.replace('0x', '').toLowerCase();
